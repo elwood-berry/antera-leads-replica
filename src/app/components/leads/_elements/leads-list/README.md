@@ -49,13 +49,13 @@ public displayedColumns: string[] = [
   "position",
   "name",
   "title",
-  "referred by",
-  "account name",
-  "office phone",
+  "referredBy",
+  "accountName",
+  "officePhone",
   "email",
-  "sales rep",
-  "date created",
-  "created by"
+  "salesRep",
+  "dateCreated",
+  "createdBy"
 ];  
 ```
 
