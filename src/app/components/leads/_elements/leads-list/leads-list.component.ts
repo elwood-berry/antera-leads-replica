@@ -48,6 +48,9 @@ const ELEMENT_DATA: LeadElement[] = [
   }
 ];
 
+/*
+DECORATOR: COMPONENT
+*/
 @Component({
   selector: 'app-leads-list',
   templateUrl: './leads-list.component.html',
@@ -63,10 +66,14 @@ const ELEMENT_DATA: LeadElement[] = [
     ])
   ]
 })
+
+/*
+CLASS: LEAD LIST
+*/
 export class LeadsListComponent implements OnInit {
   // PROPERTIES
   public displayedColumns: string[] = [
-    'position',
+    'select',
     'name',
     'title',
     'referredBy',
@@ -77,21 +84,20 @@ export class LeadsListComponent implements OnInit {
     'dateCreated',
     'createdBy'
   ];
-
   public dataSource = new MatTableDataSource<LeadElement>(ELEMENT_DATA);
-  selection = new SelectionModel<LeadElement>(true, []);
+  public selection = new SelectionModel<LeadElement>(true, []);
 
   ngOnInit() {}
 
   /** Whether the number of selected elements matches the total number of rows. */
-  isAllSelected() {
+  public isAllSelected() {
     const numSelected = this.selection.selected.length;
     const numRows = this.dataSource.data.length;
     return numSelected === numRows;
   }
 
   /** Selects all rows if they are not all selected; otherwise clear selection. */
-  masterToggle() {
+  public masterToggle() {
     if (this.isAllSelected()) {
       this.selection.clear();
       return;
@@ -101,7 +107,7 @@ export class LeadsListComponent implements OnInit {
   }
 
   /** The label for the checkbox on the passed row */
-  checkboxLabel(row?: LeadElement): string {
+  public checkboxLabel(row?: LeadElement): string {
     if (!row) {
       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
     }
