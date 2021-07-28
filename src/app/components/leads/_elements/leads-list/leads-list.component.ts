@@ -69,13 +69,13 @@ export class LeadsListComponent implements OnInit {
     'position',
     'name',
     'title',
-    'referred by',
-    'account name',
-    'office phone',
+    'referredBy',
+    'accountName',
+    'officePhone',
     'email',
-    'sales rep',
-    'date created',
-    'created by'
+    'salesRep',
+    'dateCreated',
+    'createdBy'
   ];
 
   public dataSource = new MatTableDataSource<LeadElement>(ELEMENT_DATA);
