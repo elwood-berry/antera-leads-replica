@@ -14,7 +14,10 @@ import { MaterialLibraryModule } from '../assets/libs/material/material-library/
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
+
+// LEADS
 import { LeadsComponent } from './components/leads/leads.component';
+import { LeadsListComponent } from './components/_elements/leads-list/leads-list.component';
 
 @NgModule({
   imports: [
@@ -24,7 +27,7 @@ import { LeadsComponent } from './components/leads/leads.component';
     MaterialLibraryModule,
     FlexLayoutModule
   ],
-  declarations: [AppComponent, LeadsComponent],
+  declarations: [AppComponent, LeadsComponent, LeadsListComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
