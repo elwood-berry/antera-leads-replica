@@ -58,3 +58,115 @@ public displayedColumns: string[] = [
   "created by"
 ];  
 ```
+
+## NG-CONTAINER: COLUMN: POSITION  
+position: number  
+```html  
+<!-- POSITION -->
+<ng-container matColumnDef="position">
+  <th mat-header-cell *matHeaderCellDef>Position</th>
+  <td mat-cell *matCellDef="let element">{{element.position}}</td>
+</ng-container>
+```  
+
+--- 
+
+## NG-CONTAINER: COLUMN: NAME  
+name: string  
+```html  
+<!-- NAME -->
+<ng-container matColumnDef="name">
+  <th mat-header-cell *matHeaderCellDef>Name</th>
+  <td mat-cell *matCellDef="let element">{{element.name}}</td>
+</ng-container>
+```  
+
+--- 
+## NG-CONTAINER: COLUMN: TITLE  
+title: string  
+```html  
+<!-- TITLE -->
+<ng-container matColumnDef="title">
+  <th mat-header-cell *matHeaderCellDef>Title</th>
+  <td mat-cell *matCellDef="let element">{{element.title}}</td>
+</ng-container>
+```  
+
+--- 
+## NG-CONTAINER: COLUMN: REFERRED BY  
+referredBy: string  
+```html  
+<!-- REFERRED BY -->
+<ng-container matColumnDef="referredBy">
+  <th mat-header-cell *matHeaderCellDef>Referred By</th>
+  <td mat-cell *matCellDef="let element">{{element.referredBy}}</td>
+</ng-container>
+```  
+
+--- 
+## NG-CONTAINER: COLUMN: ACCOUNT NAME  
+accountName: string  
+```html  
+<!-- ACCOUNT NAME -->
+<ng-container matColumnDef="accountName">
+  <th mat-header-cell *matHeaderCellDef>Account Name</th>
+  <td mat-cell *matCellDef="let element">{{element.accountName}}</td>
+</ng-container>
+```  
+
+--- 
+## NG-CONTAINER: COLUMN: OFFICE PHONE  
+officePhone: string  
+```html  
+<!-- OFFICE PHONE -->
+<ng-container matColumnDef="officePhone">
+  <th mat-header-cell *matHeaderCellDef>Office Phone</th>
+  <td mat-cell *matCellDef="let element">{{element.officePhone}}</td>
+</ng-container>
+```  
+
+--- 
+## NG-CONTAINER: COLUMN: EMAIL  
+email: string  
+```html  
+<!-- EMAIL -->
+<ng-container matColumnDef="email">
+  <th mat-header-cell *matHeaderCellDef>Email</th>
+  <td mat-cell *matCellDef="let element">{{element.email}}</td>
+</ng-container>
+```  
+
+--- 
+## NG-CONTAINER: COLUMN: SALES REP 
+salesRep: string  
+```html 
+<!-- SALES REP -->
+<ng-container matColumnDef="salesRep">
+  <th mat-header-cell *matHeaderCellDef>Sales Rep</th>
+  <td mat-cell *matCellDef="let element">{{element.salesRep}}</td>
+</ng-container>
+```  
+
+--- 
+## NG-CONTAINER: COLUMN: DATE CREATED  
+dateCreated: string  
+```html  
+<!-- DATE CREATED -->
+<ng-container matColumnDef="dateCreated">
+  <th mat-header-cell *matHeaderCellDef>Date Created</th>
+  <td mat-cell *matCellDef="let element">{{element.dateCreated}}</td>
+</ng-container>
+```  
+
+--- 
+## NG-CONTAINER: COLUMN: CREATED BY  
+createdBy: string    
+```html  
+<!-- CREATED BY -->
+<ng-container matColumnDef="createdBy">
+  <th mat-header-cell *matHeaderCellDef>Created By</th>
+  <td mat-cell *matCellDef="let element">{{element.createdBy}}</td>
+</ng-container>
+```  
+
+--- 
