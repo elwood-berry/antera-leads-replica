@@ -7,7 +7,7 @@ This code is brought to you by Elwood Berry @ anterasoftware.com
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
+  selector: 'leads-replica',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
