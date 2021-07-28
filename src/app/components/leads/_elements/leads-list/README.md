@@ -169,4 +169,30 @@ createdBy: string
 </ng-container>
 ```  
 
---- 
+---  
+## NG-CONTAINER: COLUMN: EXPANDED DETAILS  
+```html  
+<!-- EXPANDED DETAILS -->
+<ng-container matColumnDef="expandedDetail">
+
+<td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
+
+  <div class="example-element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+
+    <div>{{element.position}}</div>
+    <div>{{element.name}}</div>
+    <div>{{element.title}}</div>
+    <div>{{element.referredBy}}</div>
+    <div>{{element.accountName}}</div>
+    <div>{{element.officePhone}}</div>
+    <div>{{element.email}}</div>
+    <div>{{element.salesRep}}</div>
+    <div>{{element.dateCreated}}</div>
+    <div>{{element.createdBy}}</div>
+
+  </div>
+
+</td>
+
+</ng-container>
+``` 
