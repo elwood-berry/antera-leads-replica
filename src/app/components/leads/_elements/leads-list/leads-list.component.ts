@@ -14,24 +14,38 @@ import {
   trigger
 } from '@angular/animations';
 
-export interface PeriodicElement {
-  name: string;
+/*
+INTERFACE
+*/
+export interface LeadElement {
   position: number;
-  weight: number;
-  symbol: string;
+  name: string;
+  title: string;
+  referredBy: string;
+  accountName: string;
+  officePhone: string;
+  email: string;
+  salesRep: string;
+  dateCreated: string;
+  createdBy: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-  { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-  { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-  { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-  { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-  { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-  { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-  { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-  { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-  { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' }
+/*
+SAMPLE DATA
+*/
+const ELEMENT_DATA: LeadElement[] = [
+  {
+    position: 1,
+    name: 'Daenerys Targaryen', // Do we want to seperate??
+    title: 'Accountant',
+    referredBy: 'John Doe',
+    accountName: 'Targaryen Inc',
+    officePhone: '+1 (907) 200-6326',
+    email: 'tormund.giantsbane@domainname.com',
+    salesRep: 'Jane Doe',
+    dateCreated: '2021-07-20',
+    createdBy: 'Antera Support'
+  }
 ];
 
 @Component({
@@ -52,15 +66,20 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class LeadsListComponent implements OnInit {
   // PROPERTIES
   public displayedColumns: string[] = [
-    'select',
     'position',
     'name',
-    'weight',
-    'symbol'
+    'title',
+    'referred by',
+    'account name',
+    'office phone',
+    'email',
+    'sales rep',
+    'date created',
+    'created by'
   ];
 
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-  selection = new SelectionModel<PeriodicElement>(true, []);
+  public dataSource = new MatTableDataSource<LeadElement>(ELEMENT_DATA);
+  selection = new SelectionModel<LeadElement>(true, []);
 
   ngOnInit() {}
 
@@ -82,7 +101,7 @@ export class LeadsListComponent implements OnInit {
   }
 
   /** The label for the checkbox on the passed row */
-  checkboxLabel(row?: PeriodicElement): string {
+  checkboxLabel(row?: LeadElement): string {
     if (!row) {
       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
     }
