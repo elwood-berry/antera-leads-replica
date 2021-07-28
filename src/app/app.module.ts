@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
 
 // LEADS
 import { LeadsComponent } from './components/leads/leads.component';
-import { LeadsListComponent } from './components/_elements/leads-list/leads-list.component';
+import { LeadsListComponent } from './components/leads/_elements/leads-list/leads-list.component';
 
 @NgModule({
   imports: [
