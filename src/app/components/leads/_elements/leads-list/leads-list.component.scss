@@ -1,0 +1,54 @@
+/*
+ANTERA: LEADS - REPLICA
+Author: 'eberry@anterasoftware.com'
+This code is brought to you by Elwood Berry @ anterasoftware.com  
+*/
+.replica-leads-list {
+  width: 100%;
+
+  // DETAIL ROW - 'example-detail-row'
+  tr.antera-leads-detail-row {
+    height: 0;
+  }
+}
+// EXPANDED ROW - 'example-expanded-row'
+tr.antera-leads-expanded-row:not(.antera-leads-expanded-row):hover {
+  background: rgb(226, 5, 5);
+}
+
+tr.antera-leads-expanded-row:not(.antera-leads-expanded-row):active {
+  background: #130a85;
+}
+
+.antera-leads-expanded-row td {
+  border-bottom-width: 0;
+}
+
+// ELEMENT DETAIL - 'example-element-detail'
+.antera-leads-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+// .example-element-diagram {
+//   min-width: 80px;
+//   border: 2px solid black;
+//   padding: 8px;
+//   font-weight: lighter;
+//   margin: 8px 0;
+//   height: 104px;
+// }
+
+// .example-element-symbol {
+//   font-weight: bold;
+//   font-size: 40px;
+//   line-height: normal;
+// }
+
+// .example-element-description {
+//   padding: 16px;
+// }
+
+// .example-element-description-attribution {
+//   opacity: 0.5;
+// }

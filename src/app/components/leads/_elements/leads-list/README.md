@@ -1,7 +1,7 @@
 # LEADS LIST
 
-See [Table w/ Expandable Rows](https://material.angular.io/components/table/examples#table-expandable-rows)
-
+See [Table w/ Expandable Rows](https://material.angular.io/components/table/examples#table-expandable-rows)  
+See [Table w/ Selection](https://material.angular.io/components/table/examples#table-selection)
 
 ## DATA INTERFACE  
 ```ts  

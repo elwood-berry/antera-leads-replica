@@ -17,7 +17,7 @@ This code is brought to you by Elwood Berry @ anterasoftware.com
       [attr.colspan]="displayedColumns.length"
     >
       <div
-        class="example-element-detail"
+        class="antera-leads-element-detail"
         [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'"
       >
         <div>{{element.position}}</div>
@@ -119,15 +119,15 @@ This code is brought to you by Elwood Berry @ anterasoftware.com
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr
     mat-row
-    *matRowDef="let row; columns: displayedColumns;"
-    [class.example-expanded-row]="expandedElement === element"
+    *matRowDef="let element; columns: displayedColumns;"
+    [class.antera-leads-expanded-row]="expandedElement === element"
     (click)="expandedElement = expandedElement === element ? null : element"
   ></tr>
 
   <tr
     mat-row
     *matRowDef="let row; columns: ['expandedDetail']"
-    class="example-detail-row"
+    class="antera-leads-detail-row"
   ></tr>
 </table>
 

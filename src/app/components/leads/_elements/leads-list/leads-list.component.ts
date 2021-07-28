@@ -45,6 +45,18 @@ const ELEMENT_DATA: LeadElement[] = [
     salesRep: 'Jane Doe',
     dateCreated: '2021-07-20',
     createdBy: 'Antera Support'
+  },
+  {
+    position: 1,
+    name: 'Daenerys Targaryen', // Do we want to seperate??
+    title: 'Accountant',
+    referredBy: 'John Doe',
+    accountName: 'Targaryen Inc',
+    officePhone: '+1 (907) 200-6326',
+    email: 'tormund.giantsbane@domainname.com',
+    salesRep: 'Jane Doe',
+    dateCreated: '2021-07-20',
+    createdBy: 'Antera Support'
   }
 ];
 
@@ -54,7 +66,7 @@ DECORATOR: COMPONENT
 @Component({
   selector: 'app-leads-list',
   templateUrl: './leads-list.component.html',
-  styleUrls: ['./leads-list.component.css'],
+  styleUrls: ['./leads-list.component.scss'],
   animations: [
     trigger('detailExpand', [
       state('collapsed', style({ height: '0px', minHeight: '0' })),
@@ -72,6 +84,7 @@ CLASS: LEAD LIST
 */
 export class LeadsListComponent implements OnInit {
   // PROPERTIES
+  public expandedElement: LeadElement | null;
   public displayedColumns: string[] = [
     'select',
     'name',
